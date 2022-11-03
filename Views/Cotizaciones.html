@@ -1,0 +1,203 @@
+<html lang="es">
+  <head >
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cotizaciones</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/Cotizaciones.css" rel="stylesheet" media="screen">   
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script> 
+    <script src="../js/Cotizaciones.js" language="Javascript"></script>  
+  </head>
+  <body onload="consultar();">
+    <div class="container shadow bg-white">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="title">COTIZACIONES</h1>
+            </div>
+            <div class="col-sm-12">
+                <table class="table table-stripped table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Rut
+                            </th>
+                            <th>
+                                Subtotal
+                            </th>
+                            <th>
+                                Descuento
+                            </th>
+                            <th>
+                                Total
+                            </th>
+                            <th>
+                                Opciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData">
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-danger" onclick="regresar();">REGRESAR</button>
+            </div>
+            <div class="modal modal-lg" id="modalDetails" name="modalDetails">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="col-sm-12">
+                            <h4 class="title">Cotizacion</h4>
+                            <table class="table table-stripped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Id
+                                        </th>
+                                        <th>
+                                            Descuento
+                                        </th>
+                                        <th>
+                                            Subtotal
+                                        </th>
+                                        <th>
+                                            Total
+                                        </th>
+                                        <th>
+                                            Fecha
+                                        </th>
+                                        <th>
+                                            Estado
+                                        </th>
+                                        <th>
+                                            Credito
+                                        </th>
+                                        <th>
+                                            Monto
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableQuoteDetails">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4 class="title">Cliente</h4>
+                            <table class="table table-stripped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Rut
+                                        </th>
+                                        <th>
+                                            Nombre
+                                        </th>
+                                        <th>
+                                            Telefono
+                                        </th>
+                                        <th>
+                                            Email
+                                        </th>
+                                        <th>
+                                            Edad
+                                        </th>
+                                        <th>
+                                            Sexo
+                                        </th>
+                                        <th>
+                                            Region
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableClientDetails">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4 class="title">Producto</h4>
+                            <table class="table table-stripped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Id
+                                        </th>
+                                        <th>
+                                            Tipo
+                                        </th>
+                                        <th>
+                                            Descripcion
+                                        </th>
+                                        <th>
+                                            Valor
+                                        </th>
+                                        <th>
+                                            Orientacion
+                                        </th>
+                                        <th>
+                                            Piso
+                                        </th>
+                                        <th>
+                                            Superficie
+                                        </th>
+                                        <th>
+                                            Estado
+                                        </th>
+                                        <th>
+                                            Sector
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableProductDetails">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4 class="title">Usuario</h4>
+                            <table class="table table-stripped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Rut
+                                        </th>
+                                        <th>
+                                            Perfil
+                                        </th>
+                                        <th>
+                                            Nombre
+                                        </th>
+                                        <th>
+                                            Apellido
+                                        </th>
+                                        <th>
+                                            Email
+                                        </th>
+                                        <th>
+                                            Edad
+                                        </th>
+                                        <th>
+                                            Sexo
+                                        </th>
+                                        <th>
+                                            Estado
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableUserDetails">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success" onclick="cerrarModal();">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

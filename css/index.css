@@ -1,0 +1,10 @@
+  .title{
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+  }
+  
